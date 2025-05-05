@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>One Piece - Tập 1</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* MENU 3 GẠCH */
+    .menu-toggle {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #menu {
+      position: fixed;
+      top: 0;
+      left: -200px;
+      width: 180px;
+      height: 100%;
+      background: #222;
+      padding-top: 50px;
+      transition: left 0.3s;
+      z-index: 999;
+    }
+
+    #menu.active {
+      left: 0;
+    }
+
+    #menu a {
+      display: block;
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    #menu a:hover {
+      background: #333;
+    }
+
+    /* TIÊU ĐỀ & HIỆU ỨNG */
+    h1 { margin-bottom: 10px; }
+
+    .highlight {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f1c40f;
+      text-shadow: 0 0 10px #f39c12;
+      animation: shake 0.3s infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-1.5px); }
+      50% { transform: translateX(1.5px); }
+      75% { transform: translateX(-1px); }
+      100% { transform: translateX(0); }
+    }
+
+    video {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 10px;
+    }
+
+    .controls {
+      margin-top: 20px;
+    }
+
+    .controls a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #444;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .controls a:hover {
+      background: #666;
+    }
+
+    .views {
+      margin-top: 15px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TIÊU ĐỀ -->
+  <h1>CONAN - Tập 2</h1>
+  <div class="highlight"> Vụ án trong phòng kín! Sự thật sau cửa sổ
+    </div>
+
+  <!-- VIDEO -->
+  <iframe width="100%" height="480"
+        src="https://www.youtube.com/embed/p90V7QNJuX8"
+        title="Conan Tập 2 - Lồng Tiếng"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+</iframe>
+
+  <!-- LƯỢT XEM -->
+  <div class="views">Lượt xem: <span id="view-count">0</span>
+
+  <button class="like-btn" onclick="likeVideo()">Like ❤️ <span id="like-count">0</span></button>
+</div>
+
+  <!-- NÚT ĐIỀU HƯỚNG -->
+  <div class="controls">
+    <a href="CONAN.html">← Quay lại</a>
+    <a href="CONAN-tap3.html">Tập tiếp theo →</a>
+  </div><div class="watch-container">
+
+  <!-- Danh sách tập -->
+  <div class="episode">
+    <h2>Các tập khác:</h2>
+    <ul>
+      <li><img src="CONAN-anh3.jpg"><a href="tap3.html">Tập 3- Vụ án giết người trong đêm Halloween</a></li>
+      <li><img src="CONAN-anh4.jpg"><a href="tap4.html">Tập 4- Vụ án bắt cóc cô bé Ayumi</a></li>
+      <li><img src="CONAN-anh5.jpg"><a href="tap5.html">Tập 5- Bí ẩn lời nhắn trên tường máu</a></li>
+    </ul>
+  </div>
+</div>
+
+  <!-- SCRIPT -->
+  <script>
+    // Toggle menu 3 gạch
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    // Lượt xem (giả lập bằng localStorage)
+    const viewKey = "CONAN-tap2-views";
+    let views = localStorage.getItem(viewKey);
+    views = views ? parseInt(views) + 1 : 1;
+    localStorage.setItem(viewKey, views);
+    document.getElementById("view-count").textContent = views;
+    
+    let likes = localStorage.getItem("videoLikes") || 0;
+  document.getElementById("like-count").innerText = likes;
+
+  function likeVideo() {
+    likes++;
+    document.getElementById("like-count").innerText = likes;
+    localStorage.setItem("videoLikes", likes); // Lưu lại vào bộ nhớ trình duyệt
+  }
+</script>
+</body>
+</html>
