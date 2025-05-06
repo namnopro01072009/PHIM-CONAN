@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>One Piece - Tập 1</title>
+  <title>CONAN - Tập 2</title>
   <style>
     body {
       background: #111;
@@ -97,18 +97,45 @@
       margin-top: 15px;
       color: #aaa;
     }
+.episode-box {
+  display: flex;
+  align-items: center;
+  background-color: #000; /* nền đen */
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+  text-decoration: none; /* XÓA GẠCH CHÂN */
+  color: #4fc3f7; /* chữ xanh sáng */
+  font-size: 25px; /* CHỮ TO HƠN */
+}
+
+.episode-box img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.episode-text {
+  color: #4fc3f7; /* chữ xanh sáng */
+  font-size: 16px;
+  line-height: 1.4;
+}
   </style>
 </head>
 <body>
 
   <!-- TIÊU ĐỀ -->
   <h1>CONAN - Tập 2</h1>
-  <div class="highlight"> Vụ án trong phòng kín! Sự thật sau cửa sổ
+  <div class="highlight"> Thám tử bị teo nhỏ !!
     </div>
 
   <!-- VIDEO -->
   <iframe width="100%" height="480"
-        src="https://www.youtube.com/embed/p90V7QNJuX8"
+        src="https://www.youtube.com/embed/9mbGOrXLMhE"
         title="Conan Tập 2 - Lồng Tiếng"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -129,22 +156,26 @@
 
   <!-- Danh sách tập -->
   <div class="episode">
-    <h2>Các tập khác:</h2>
+    <h2>Các tiếp theo:</h2>
     <ul>
-      <li><img src="CONAN-anh3.jpg"><a href="tap3.html">Tập 3- Vụ án giết người trong đêm Halloween</a></li>
-      <li><img src="CONAN-anh4.jpg"><a href="tap4.html">Tập 4- Vụ án bắt cóc cô bé Ayumi</a></li>
-      <li><img src="CONAN-anh5.jpg"><a href="tap5.html">Tập 5- Bí ẩn lời nhắn trên tường máu</a></li>
+<a href="CONAN-tap3.html" class="episode-box">
+  <img src="https://ia601206.us.archive.org/20/items/tai-xuong_20250505/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 3">
+  <div class="episode-text">
+    <strong>Tập 3 -</strong> Án mạng trong phòng kính idol !!
+  </div>
+</a>
+<a href="CONAN-tap4.html" class="episode-box">
+  <img src="https://dn721301.ca.archive.org/0/items/tai-xuong_20250505_1539/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 4">
+  <div class="episode-text">
+    <strong>Tập 4 -</strong> Ám hiệu con cá phát sáng !!
+  </div>
+</a>
     </ul>
   </div>
 </div>
-
+  <!-- tap7-->
   <!-- SCRIPT -->
   <script>
-    // Toggle menu 3 gạch
-    function toggleMenu() {
-      document.getElementById("menu").classList.toggle("active");
-    }
-
     // Lượt xem (giả lập bằng localStorage)
     const viewKey = "CONAN-tap2-views";
     let views = localStorage.getItem(viewKey);

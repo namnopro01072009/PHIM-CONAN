@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>One Piece - Danh sách tập</title>
+  <title>CONAN - Danh sách tập</title>
   <style>
     body {
       background: #111;
@@ -14,31 +14,88 @@
       font-size: 28px;
       margin-bottom: 20px;
     }
-    .episode {
-      background: #222;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 10px;
-    }
-    .episode a {
-      color: #4fc3f7;
-      text-decoration: none;
-    }
     .back-link {
       color: #ccc;
       margin-bottom: 20px;
       display: inline-block;
+      text-decoration: none
+    }
+.episode-box {
+  display: flex;
+  align-items: center;
+  background-color: #000; /* nền đen */
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+  text-decoration: none; /* XÓA GẠCH CHÂN */
+  color: #4fc3f7; /* chữ xanh sáng */
+  font-size: 25px; /* CHỮ TO HƠN */
+}
+
+.episode-box img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 4px;
+}
+
+.episode-text {
+  color: #4fc3f7; /* chữ xanh sáng */
+  font-size: 16px;
+  line-height: 1.4;
+}
+    .film-card {
+      background: #222;
+      padding: 10px;
+      border-radius: 10px;
+      width: 45%;
+      text-align: center;
+    }
+
+    .film-card img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .film-card a {
+      color: violet;
+      text-decoration: none;
+      display: block;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
   <a href="https://namnopro01072009.github.io/Trang-chu/index.html" class="back-link">← Quay lại trang chủ</a>
-  <h1>One Piece - Danh sách tập</h1>
+  <h1>CONAN - Danh sách tập</h1>
 
- <div class="episode"><a href="CONAN-tap1.html">Tập 1:Vụ Án Đầu Tiên !!</a></div>
- <div class="episode"><a href="CONAN-tap2.html">Tập 2 : Vụ án trong phòng kín! Sự thật phía sau cửa sổ</a></div>
- <div class="episode"><a href="CONAN-tap3.html">Tập 3:Vụ án giết người trong đêm Halloween</a></div>
- <div class="episode"><a href="CONAN-tap4.html">Tập 4:Vụ án bắt cóc cô bé Ayumi</a></div>
+<a href="CONAN-tap1.html" class="episode-box">
+  <img src="https://dn721803.ca.archive.org/0/items/CONAN-anh1.jpg/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 1">
+  <div class="episode-text">
+    <strong>Tập 1 -</strong> Vụ án trên tàu lượn siêu tốc !!
+  </div>
+</a>
+<a href="CONAN-tap2.html" class="episode-box">
+  <img src="https://ia600505.us.archive.org/6/items/tai-xuong_202505/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 2">
+  <div class="episode-text">
+    <strong>Tập 2 -</strong> Thám tử bị teo nhỏ !! 
+  </div>
+</a>
+<a href="CONAN-tap3.html" class="episode-box">
+  <img src="https://ia601206.us.archive.org/20/items/tai-xuong_20250505/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 3">
+  <div class="episode-text">
+    <strong>Tập 3 -</strong> Án mạng trong phòng kính idol !!
+  </div>
+</a>
+<a href="CONAN-tap4.html" class="episode-box">
+  <img src="https://dn721301.ca.archive.org/0/items/tai-xuong_20250505_1539/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 4">
+  <div class="episode-text">
+    <strong>Tập 4 -</strong> Ám hiệu con cá phát sáng !!
+  </div>
+</a>
   <!-- Thêm các tập khác tùy ý -->
 </body>
 </html>
