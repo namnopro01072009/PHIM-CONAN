@@ -124,6 +124,23 @@
   font-size: 16px;
   line-height: 1.4;
 }
+.video-player-container {
+  max-width: 960px;
+  margin: 30px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+video {
+  width: 100%;
+  height: auto;
+  background-color: #000;
+  border: none;
+  outline: none;
+  display: block;
+  border-radius: 12px;
+}
   </style>
 </head>
 <body>
@@ -134,13 +151,12 @@
     </div>
 
   <!-- VIDEO -->
-  <iframe width="100%" height="480"
-        src="https://www.youtube.com/embed/p90V7QNJuX8"
-        title="Conan Tập 1 - Lồng Tiếng"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-</iframe>
+ <div class="video-player-container">
+  <video id="videoPlayer" controls preload="metadata">
+    <source src="" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video.
+  </video>
+</div>
 
   <!-- LƯỢT XEM -->
   <div class="views">Lượt xem: <span id="view-count">0</span>

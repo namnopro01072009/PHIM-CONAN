@@ -1,37 +1,62 @@
-<!DOCTYPE html>
-<html lang="vi">
+<!DOCTYPE html><html lang="vi">
 <head>
   <meta charset="UTF-8">
   <title>CONAN - Danh sách tập</title>
   <style>
     body {
-      background: #111;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('https://archive.org/download/file_00000000c0ac61f8969e03165a9f234e/file_00000000c0ac61f8969e03165a9f234e.png') no-repeat center top fixed;
+      background-size: cover;
       color: white;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .back-link {
-      color: #ccc;
-      margin-bottom: 20px;
-      display: inline-block;
-      text-decoration: none
-    }
+    }.overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.back-link {
+  color: #ccc;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.description {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.description h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.description p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
 .episode-box {
   display: flex;
   align-items: center;
-  background-color: #000; /* nền đen */
+  background-color: #000;
   border: 1px solid #222;
   padding: 10px;
   margin: 10px 0;
-  font-family: 'Montserrat', sans-serif;
   border-radius: 5px;
-  text-decoration: none; /* XÓA GẠCH CHÂN */
-  color: #4fc3f7; /* chữ xanh sáng */
-  font-size: 25px; /* CHỮ TO HƠN */
+  text-decoration: none;
+  color: #4fc3f7;
+  font-size: 20px;
 }
 
 .episode-box img {
@@ -43,59 +68,77 @@
 }
 
 .episode-text {
-  color: #4fc3f7; /* chữ xanh sáng */
-  font-size: 16px;
-  line-height: 1.4;
+  color: rgb(255,34,34);
+  font-size: 15px;
+  line-height: 1.0;
 }
-    .film-card {
-      background: #222;
-      padding: 10px;
-      border-radius: 10px;
-      width: 45%;
-      text-align: center;
-    }
 
-    .film-card img {
-      width: 100%;
-      border-radius: 5px;
-    }
-
-    .film-card a {
-      color: violet;
-      text-decoration: none;
-      display: block;
-      margin-top: 5px;
-    }
   </style>
 </head>
 <body>
-  <a href="https://namnopro01072009.github.io/Trang-chu/index.html" class="back-link">← Quay lại trang chủ</a>
-  <h1>CONAN - Danh sách tập</h1>
+  <div class="overlay">
+    <a href="index.html" class="back-link">← Quay lại trang chủ</a>
+    <h1>CONAN - Danh sách tập</h1>
+  <div class="description">
+  <h2>Giới thiệu</h2>
+
+  <!-- Nút nguồn phát hành -->
+<a href="https://www.youtube.com/@POPSAnime" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; margin-bottom: 15px;">
+  <div style="width: 17px; height: 17px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.15); color: white; font-weight: bold; display: flex; justify-content: center; align-items: center; font-size: 10px;">
+    C
+  </div>
+  <span style="margin-left: 8px; color: #ccc; font-size: 11px;">
+    Pop Anime
+  </span>
+  </a>
+
+  <p style="font-size: 15px; color: #ccc; line-height: 1.6;">
+       Thám tử lừng danh Conan là một trong những loạt phim hoạt hình trinh thám nổi tiếng đến từ Nhật Bản. 
+      Nhân vật chính là thám tử trung học Shinichi Kudo, sau khi bị teo nhỏ bởi một loại thuốc độc, đã lấy bí danh Conan Edogawa và tiếp tục phá các vụ án ly kỳ. Dưới hình hài mới, Conan tiếp tục giải quyết các vụ án bí ẩn, đồng thời tìm cách lật tẩy tổ chức đứng sau và tìm lại thân hình thật. Phim kết hợp yếu tố trinh thám, hành động và hài hước hấp dẫn.
+      Mỗi tập phim đều là một câu chuyện riêng biệt, lôi cuốn với tình tiết gay cấn, thông minh và đầy bất ngờ.
+  </p>
+</div>
+<div style="margin: 30px 0;">
+  <div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <span style="font-size: 20px; margin-right: 8px;">📂</span>
+    <h2 style="margin: 0; font-size: 20px;">Danh sách tập</h2>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <label for="jumpInput" style="font-size: 14px; color: #ccc;">Nhập số tập để chuyển đến:</label>
+    <input type="number" id="jumpInput" min="1" placeholder="VD: 5" style="width: 60px; padding: 5px; margin-left: 10px; border-radius: 4px; border: none;">
+    <button onclick="jumpToEpisode()" style="padding: 5px 10px; margin-left: 5px; background: #4fc3f7; border: none; border-radius: 4px; color: black; font-weight: bold;">
+      Xem
+    </button>
+  </div>
+</div>
 
 <a href="CONAN-tap1.html" class="episode-box">
   <img src="https://dn721803.ca.archive.org/0/items/CONAN-anh1.jpg/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 1">
-  <div class="episode-text">
-    <strong>Tập 1 -</strong> Vụ án trên tàu lượn siêu tốc !!
-  </div>
+  <div class="episode-text"><strong>Tập 1 -</strong> Vụ án trên tàu lượn siêu tốc !!</div>
 </a>
+
 <a href="CONAN-tap2.html" class="episode-box">
   <img src="https://ia600505.us.archive.org/6/items/tai-xuong_202505/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 2">
-  <div class="episode-text">
-    <strong>Tập 2 -</strong> Thám tử bị teo nhỏ !! 
-  </div>
+  <div class="episode-text"><strong>Tập 2 -</strong> Thám tử bị teo nhỏ !!</div>
 </a>
+
 <a href="CONAN-tap3.html" class="episode-box">
   <img src="https://ia601206.us.archive.org/20/items/tai-xuong_20250505/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 3">
-  <div class="episode-text">
-    <strong>Tập 3 -</strong> Án mạng trong phòng kính idol !!
-  </div>
+  <div class="episode-text"><strong>Tập 3 -</strong> Án mạng trong phòng kính idol !!</div>
 </a>
+
 <a href="CONAN-tap4.html" class="episode-box">
   <img src="https://dn721301.ca.archive.org/0/items/tai-xuong_20250505_1539/t%E1%BA%A3i%20xu%E1%BB%91ng.jpeg" alt="Tập 4">
-  <div class="episode-text">
-    <strong>Tập 4 -</strong> Ám hiệu con cá phát sáng !!
-  </div>
-</a>
-  <!-- Thêm các tập khác tùy ý -->
+  <div class="episode-text"><strong>Tập 4 -</strong> Ám hiệu con cá phát sáng !!</div>
+</a></div>
+<script>
+  function jumpToEpisode() {
+    const num = document.getElementById('jumpInput').value;
+    if (num) {
+      window.location.href = `CONAN-tap${num}.html`;
+    }
+  }
+</script>
 </body>
 </html>
